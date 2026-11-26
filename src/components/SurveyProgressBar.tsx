@@ -29,8 +29,8 @@ export function SurveyProgressBar({ currentStep, steps }: SurveyProgressBarProps
     >
       {/* Top concise text indicator for instant mobile readability */}
       <div className="flex items-baseline justify-between gap-3 mb-2.5">
-        <div className="flex items-center gap-2 text-sm font-semibold text-[#142220] whitespace-nowrap">
-          <span className="tabular-nums text-teal-700">
+        <div className="flex items-center gap-2 text-sm font-semibold text-[#0F172A] whitespace-nowrap">
+          <span className="tabular-nums text-sky-700">
             {clampedStep} / {totalSteps}
           </span>
           <span aria-hidden="true" className="text-slate-300">
@@ -39,15 +39,15 @@ export function SurveyProgressBar({ currentStep, steps }: SurveyProgressBarProps
           <span>{activeStep?.label}</span>
         </div>
 
-        <span className="text-xs font-semibold tabular-nums text-teal-700 whitespace-nowrap shrink-0">
+        <span className="text-xs font-semibold tabular-nums text-sky-700 whitespace-nowrap shrink-0">
           {progressPercent}%
         </span>
       </div>
 
       {/* Smooth animated progress track using GPU scaleX */}
-      <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-teal-950/8">
+      <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-sky-950/10">
         <motion.div
-          className="h-full w-full origin-left rounded-full bg-teal-700"
+          className="h-full w-full origin-left rounded-full bg-sky-700"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: progressRatio }}
           transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
@@ -70,9 +70,9 @@ export function SurveyProgressBar({ currentStep, steps }: SurveyProgressBarProps
                 transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-semibold tabular-nums transition-colors duration-200 ${
                   isCompleted
-                    ? 'bg-teal-700 text-white'
+                    ? 'bg-sky-700 text-white'
                     : isCurrent
-                      ? 'bg-teal-50 text-teal-800 ring-2 ring-teal-700'
+                      ? 'bg-sky-50 text-sky-800 ring-2 ring-sky-700'
                       : 'bg-slate-100 text-slate-400'
                 }`}
               >
@@ -81,9 +81,9 @@ export function SurveyProgressBar({ currentStep, steps }: SurveyProgressBarProps
               <span
                 className={`truncate text-xs transition-colors duration-200 ${
                   isCurrent
-                    ? 'font-semibold text-[#142220]'
+                    ? 'font-semibold text-[#0F172A]'
                     : isCompleted
-                      ? 'font-medium text-teal-800'
+                      ? 'font-medium text-sky-800'
                       : 'font-normal text-slate-400'
                 }`}
               >

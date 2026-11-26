@@ -170,13 +170,13 @@ export default function App() {
     (currentStep === 3 && hasCategorySelection);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7FAF9] text-[#142220]">
+    <div className="min-h-screen flex flex-col bg-[#F5F8FC] text-[#0F172A]">
       <header className="sticky top-0 z-30 h-14 border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
         <div className="mx-auto flex h-full max-w-5xl items-center justify-between gap-4 px-4 sm:px-6">
           <button
             type="button"
             onClick={handleRestart}
-            className="text-base sm:text-lg font-bold tracking-tight text-[#142220] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 rounded-md"
+            className="text-base sm:text-lg font-bold tracking-tight text-[#0F172A] whitespace-nowrap shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700 rounded-md"
           >
             계룡시 보건소
           </button>
@@ -185,7 +185,7 @@ export default function App() {
             <button
               type="button"
               onClick={handleRestart}
-              className="min-h-[40px] inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3.5 py-2 text-xs sm:text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#142220] transition-colors whitespace-nowrap shrink-0"
+              className="min-h-[40px] inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-3.5 py-2 text-xs sm:text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#0F172A] transition-colors whitespace-nowrap shrink-0"
             >
               <RotateCcw className="h-3.5 w-3.5" aria-hidden="true" />
               <span>처음으로</span>
@@ -198,12 +198,12 @@ export default function App() {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-10 lg:items-start">
           {/* Left / Top Context Column */}
           <section className="lg:col-span-5 lg:sticky lg:top-24">
-            <div className="flex items-center gap-2 text-teal-800 mb-2.5">
+            <div className="flex items-center gap-2 text-sky-800 mb-2.5">
               <HeartHandshake className="h-5 w-5 shrink-0" aria-hidden="true" />
               <span className="text-sm font-semibold">계룡시 보건소 맞춤 서비스 안내</span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#142220] leading-snug text-balance">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#0F172A] leading-snug text-balance">
               나에게 맞는 보건소 서비스 찾기
             </h1>
 
@@ -222,7 +222,7 @@ export default function App() {
                   className="h-44 sm:h-52 w-full object-cover object-center block"
                 />
               ) : (
-                <div className="h-44 sm:h-52 w-full bg-gradient-to-br from-teal-50 to-slate-100 flex flex-col items-center justify-center gap-2 text-teal-800">
+                <div className="h-44 sm:h-52 w-full bg-gradient-to-br from-sky-50 to-slate-100 flex flex-col items-center justify-center gap-2 text-sky-800">
                   <HeartHandshake className="h-8 w-8" aria-hidden="true" />
                   <span className="text-sm font-semibold">계룡시 보건소</span>
                 </div>
@@ -230,8 +230,8 @@ export default function App() {
             </figure>
 
             {/* Operating Hours Card */}
-            <div className="mt-4 rounded-2xl border border-teal-800/15 bg-teal-50/70 px-4 py-3 text-xs sm:text-sm text-teal-950 leading-relaxed flex items-start gap-2.5">
-              <Clock className="h-4 w-4 shrink-0 text-teal-800 mt-0.5" aria-hidden="true" />
+            <div className="mt-4 rounded-2xl border border-sky-800/15 bg-sky-50/70 px-4 py-3 text-xs sm:text-sm text-sky-950 leading-relaxed flex items-start gap-2.5">
+              <Clock className="h-4 w-4 shrink-0 text-sky-800 mt-0.5" aria-hidden="true" />
               <span>{OPERATING_HOURS}</span>
             </div>
 
@@ -240,7 +240,7 @@ export default function App() {
               (selectedAgeLabel || selectedResidencyLabel || selectedCategoryLabels.length > 0) && (
                 <div className="mt-4 rounded-2xl border border-slate-200/90 bg-white p-4">
                   <div className="text-xs font-semibold text-slate-500 mb-1.5">선택한 내용</div>
-                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-[#142220]">
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-medium text-[#0F172A]">
                     <span>{selectedAgeLabel ?? '나이대 미선택'}</span>
                     <span aria-hidden="true" className="text-slate-300">
                       ·
@@ -277,7 +277,7 @@ export default function App() {
                         exit={{ opacity: 0, x: direction * -16 }}
                         transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <h2 className="text-xl sm:text-2xl font-bold text-[#142220] leading-snug">
+                        <h2 className="text-xl sm:text-2xl font-bold text-[#0F172A] leading-snug">
                           어떤 나이대에 해당하시나요?
                         </h2>
                         <p className="mt-1.5 text-sm text-slate-600">하나를 선택해 주세요.</p>
@@ -296,10 +296,10 @@ export default function App() {
                                 role="radio"
                                 aria-checked={isSelected}
                                 onClick={() => handleSelectAge(option.code)}
-                                className={`min-h-[56px] w-full flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left transition-colors duration-150 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 ${
+                                className={`min-h-[56px] w-full flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left transition-colors duration-150 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700 ${
                                   isSelected
-                                    ? 'border-teal-700 bg-teal-50/75 text-[#142220]'
-                                    : 'border-slate-200 bg-white text-[#142220] hover:border-teal-600/50 hover:bg-[#F7FAF9]'
+                                    ? 'border-sky-700 bg-sky-50/75 text-[#0F172A]'
+                                    : 'border-slate-200 bg-white text-[#0F172A] hover:border-sky-600/50 hover:bg-[#F5F8FC]'
                                 }`}
                               >
                                 <div className="min-w-0">
@@ -313,7 +313,7 @@ export default function App() {
                                 <span
                                   className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition-colors ${
                                     isSelected
-                                      ? 'border-teal-700 bg-teal-700 text-white'
+                                      ? 'border-sky-700 bg-sky-700 text-white'
                                       : 'border-slate-300 bg-white'
                                   }`}
                                 >
@@ -336,7 +336,7 @@ export default function App() {
                         exit={{ opacity: 0, x: direction * -16 }}
                         transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <h2 className="text-xl sm:text-2xl font-bold text-[#142220] leading-snug">
+                        <h2 className="text-xl sm:text-2xl font-bold text-[#0F172A] leading-snug">
                           계룡시에 거주하고 계신가요?
                         </h2>
                         <p className="mt-1.5 text-sm text-slate-600">
@@ -357,10 +357,10 @@ export default function App() {
                                 role="radio"
                                 aria-checked={isSelected}
                                 onClick={() => handleSelectResidency(option.code)}
-                                className={`min-h-[56px] w-full flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left transition-colors duration-150 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 ${
+                                className={`min-h-[56px] w-full flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left transition-colors duration-150 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700 ${
                                   isSelected
-                                    ? 'border-teal-700 bg-teal-50/75 text-[#142220]'
-                                    : 'border-slate-200 bg-white text-[#142220] hover:border-teal-600/50 hover:bg-[#F7FAF9]'
+                                    ? 'border-sky-700 bg-sky-50/75 text-[#0F172A]'
+                                    : 'border-slate-200 bg-white text-[#0F172A] hover:border-sky-600/50 hover:bg-[#F5F8FC]'
                                 }`}
                               >
                                 <div className="min-w-0">
@@ -374,7 +374,7 @@ export default function App() {
                                 <span
                                   className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition-colors ${
                                     isSelected
-                                      ? 'border-teal-700 bg-teal-700 text-white'
+                                      ? 'border-sky-700 bg-sky-700 text-white'
                                       : 'border-slate-300 bg-white'
                                   }`}
                                 >
@@ -397,7 +397,7 @@ export default function App() {
                         exit={{ opacity: 0, x: direction * -16 }}
                         transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <h2 className="text-xl sm:text-2xl font-bold text-[#142220] leading-snug">
+                        <h2 className="text-xl sm:text-2xl font-bold text-[#0F172A] leading-snug">
                           해당되는 분류를 모두 선택해 주세요
                         </h2>
                         <p className="mt-1.5 text-sm text-slate-600">
@@ -417,17 +417,17 @@ export default function App() {
                                 type="button"
                                 aria-pressed={isSelected}
                                 onClick={() => handleToggleCategory(option.code)}
-                                className={`min-h-[56px] w-full flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left transition-colors duration-150 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-700 ${
+                                className={`min-h-[56px] w-full flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left transition-colors duration-150 active:scale-[0.99] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-700 ${
                                   isSelected
-                                    ? 'border-teal-700 bg-teal-50/75 text-[#142220]'
-                                    : 'border-slate-200 bg-white text-[#142220] hover:border-teal-600/50 hover:bg-[#F7FAF9]'
+                                    ? 'border-sky-700 bg-sky-50/75 text-[#0F172A]'
+                                    : 'border-slate-200 bg-white text-[#0F172A] hover:border-sky-600/50 hover:bg-[#F5F8FC]'
                                 }`}
                               >
                                 <span className="text-base font-semibold">{option.label}</span>
                                 <span
                                   className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border transition-colors ${
                                     isSelected
-                                      ? 'border-teal-700 bg-teal-700 text-white'
+                                      ? 'border-sky-700 bg-sky-700 text-white'
                                       : 'border-slate-300 bg-white'
                                   }`}
                                 >
@@ -452,7 +452,7 @@ export default function App() {
                       className={`min-h-[50px] inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-bold transition-colors whitespace-nowrap shrink-0 ${
                         currentStep === 1
                           ? 'opacity-35 cursor-not-allowed bg-white text-slate-400'
-                          : 'bg-white text-[#142220] hover:bg-slate-50'
+                          : 'bg-white text-[#0F172A] hover:bg-slate-50'
                       }`}
                     >
                       <ArrowLeft className="h-4 w-4" aria-hidden="true" />
@@ -465,7 +465,7 @@ export default function App() {
                       disabled={!canProceedCurrentStep}
                       className={`min-h-[50px] inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold transition-colors whitespace-nowrap shrink-0 ${
                         canProceedCurrentStep
-                          ? 'bg-teal-700 text-white hover:bg-teal-800 active:scale-[0.98]'
+                          ? 'bg-sky-700 text-white hover:bg-sky-800 active:scale-[0.98]'
                           : 'bg-slate-100 text-slate-400 cursor-not-allowed'
                       }`}
                     >
@@ -502,9 +502,9 @@ export default function App() {
                     )}
                   </div>
 
-                  <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[#142220]">
+                  <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[#0F172A]">
                     받을 수 있는 서비스{' '}
-                    <span className="text-teal-700 tabular-nums">{matchedServices.length}건</span>
+                    <span className="text-sky-700 tabular-nums">{matchedServices.length}건</span>
                   </h2>
 
                   {answers.residency === 'y0' && (
@@ -517,7 +517,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={handleBack}
-                      className="min-h-[48px] inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-5 py-2 text-sm font-bold text-[#142220] hover:bg-slate-50 transition-colors whitespace-nowrap shrink-0"
+                      className="min-h-[48px] inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-5 py-2 text-sm font-bold text-[#0F172A] hover:bg-slate-50 transition-colors whitespace-nowrap shrink-0"
                     >
                       <ArrowLeft className="h-4 w-4" aria-hidden="true" />
                       <span>이전</span>
@@ -526,7 +526,7 @@ export default function App() {
                     <button
                       type="button"
                       onClick={handleRestart}
-                      className="min-h-[48px] inline-flex items-center gap-1.5 rounded-xl bg-teal-700 px-5 py-2 text-sm font-bold text-white hover:bg-teal-800 transition-colors whitespace-nowrap shrink-0"
+                      className="min-h-[48px] inline-flex items-center gap-1.5 rounded-xl bg-sky-700 px-5 py-2 text-sm font-bold text-white hover:bg-sky-800 transition-colors whitespace-nowrap shrink-0"
                     >
                       <RotateCcw className="h-4 w-4" aria-hidden="true" />
                       <span>다시 확인하기</span>
@@ -537,13 +537,13 @@ export default function App() {
                 {/* Matched Service List */}
                 {matchedServices.length === 0 ? (
                   <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-7 shadow-sm">
-                    <h3 className="text-lg font-bold text-[#142220]">해당되는 서비스가 없습니다</h3>
+                    <h3 className="text-lg font-bold text-[#0F172A]">해당되는 서비스가 없습니다</h3>
                     <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed">
                       해당되는 서비스가 없습니다. 보건소({TEL})로 문의해 주세요.
                     </p>
                     <a
                       href={formatTelHref(TEL)}
-                      className="mt-4 inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-teal-50 px-4 py-2 text-sm font-bold text-teal-900 hover:bg-teal-100 transition-colors tabular-nums"
+                      className="mt-4 inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-sky-50 px-4 py-2 text-sm font-bold text-sky-900 hover:bg-sky-100 transition-colors tabular-nums"
                     >
                       <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
                       <span>보건소 {TEL}</span>
@@ -556,7 +556,7 @@ export default function App() {
                         key={service.id}
                         className="rounded-3xl border border-slate-200/90 bg-white p-5 sm:p-6 shadow-sm"
                       >
-                        <h3 className="text-lg sm:text-xl font-bold text-[#142220] leading-snug">
+                        <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] leading-snug">
                           {service.title}
                         </h3>
 
@@ -564,7 +564,7 @@ export default function App() {
                           대상: {service.target}
                         </p>
 
-                        <p className="mt-2.5 text-sm sm:text-base text-[#142220] leading-relaxed">
+                        <p className="mt-2.5 text-sm sm:text-base text-[#0F172A] leading-relaxed">
                           {service.description}
                         </p>
 
@@ -578,7 +578,7 @@ export default function App() {
 
                         <a
                           href={formatTelHref(service.telNumber)}
-                          className="mt-3 inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-teal-50 px-4 py-2 text-sm font-bold text-teal-900 hover:bg-teal-100 transition-colors tabular-nums"
+                          className="mt-3 inline-flex min-h-[44px] items-center gap-2 rounded-xl bg-sky-50 px-4 py-2 text-sm font-bold text-sky-900 hover:bg-sky-100 transition-colors tabular-nums"
                         >
                           <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
                           <span>
