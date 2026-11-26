@@ -1,0 +1,6 @@
+{
+  "name": "계룡시 보건소 맞춤형 사업 안내",
+  "description": "계룡시 주민이 나이대, 성별, 거주지역 3가지 질문으로 자신에게 맞는 보건소 지원 사업을 확인하는 안내 웹페이지입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
