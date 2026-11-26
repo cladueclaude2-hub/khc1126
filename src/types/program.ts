@@ -1,4 +1,4 @@
-export type AgeCode = 'u18' | 'y' | 'a' | 's65' | 's70';
+export type AgeCode = 'u18' | 'y' | 'a' | 's65' | 's70' | 's80';
 
 export type ResidencyCode = 'y1' | 'y0' | 'no';
 

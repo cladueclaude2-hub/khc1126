@@ -32,7 +32,8 @@ export const AGE_OPTIONS: OptionItem<AgeCode>[] = [
   { code: 'y', label: '18~20세' },
   { code: 'a', label: '21~64세' },
   { code: 's65', label: '65~69세' },
-  { code: 's70', label: '70세 이상' },
+  { code: 's70', label: '70~79세' },
+  { code: 's80', label: '80세 이상' },
 ];
 
 export const RESIDENCY_OPTIONS: OptionItem<ResidencyCode>[] = [
@@ -89,7 +90,7 @@ export const SERVICES: HealthService[] = [
     description: '대상포진 예방접종 비용 지원',
     telLabel: '예방접종실',
     telNumber: VAC,
-    match: (s) => s.y1 && s.age === 's70',
+    match: (s) => s.y1 && (s.age === 's70' || s.age === 's80'),
   },
   {
     id: 'svc-5',
@@ -254,7 +255,7 @@ export function matchServices(answers: SurveyAnswers): HealthService[] {
     age: answers.age,
     res: answers.residency !== 'no',
     y1: answers.residency === 'y1',
-    old: answers.age === 's65' || answers.age === 's70',
+    old: answers.age === 's65' || answers.age === 's70' || answers.age === 's80',
     c: answers.categories,
   };
 
